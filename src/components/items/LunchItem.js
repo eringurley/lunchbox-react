@@ -4,8 +4,8 @@ import styles from './LunchItem.css';
 
 function LunchItem({ count, type }) {
   return (
-    <p> className = {styles.LunchItem}
-      <span>{count}</span>,
+    <p className = {styles.LunchItem}> 
+      <span>{count}</span>
       <span>{type}</span>
     </p>
   );

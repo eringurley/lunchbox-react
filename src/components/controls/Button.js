@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 
 function Button({ type, clickHandler }) {
   return  (
-    <button onClick={() => clickHandler(type)}>
-      {type}
-    </button>
+    <button onClick={() => clickHandler(type)}>{type}</button>
   );
 }
 

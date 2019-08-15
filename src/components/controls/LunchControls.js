@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Button from './Button';
 
+//presenational component (which uses functions instead of classes/component)
 function LunchControls({ types }) {
-  const listItems = types.map(({type, clickHandler => (
+  const listItems = types.map(({ type, clickHandler }) => (
     <li key={type}>
       <Button type={type} clickHandler={clickHandler}/>
     </li>
@@ -13,13 +15,14 @@ function LunchControls({ types }) {
       {listItems}
     </ul>
   );
+}
 
 LunchControls.propTypes = {
   types: PropTypes.arrayOf(PropTypes.shape({
-    types: PropTypes.string.isRequired,
-    clickHander: PropTypes.func.isRequired
+    type: PropTypes.string.isRequired,
+    clickHandler: PropTypes.func.isRequired
   })).isRequired
 };
-  )}
 
 export default LunchControls;
+
